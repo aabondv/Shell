@@ -27,7 +27,7 @@ function gitclone()
   else
     for ((i=1;i<=$pageNum;i++))
   	do
-  	   curl "$git_host/$username?tab=repositories&page=$i" | grep codeRepository | grep -oP '(?<=href=").*?(?=" )' >> $tmp_log
+  	   curl "$git_host/$username?tab=repositories&page=$i" | grep codeRepository | grep -oP '(?<=href=").*?(?=")' >> $tmp_log
   	done
   fi
   
